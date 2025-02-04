@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace primeiro_git
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
         }
@@ -32,17 +32,12 @@ namespace primeiro_git
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-
+            pictureBox1.Location = new Point(8, 8);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            pictureBox1.Location = new Point(8,8);
-            TXTsenha.PasswordChar = '*';
-        }
-        int menu =1;
+        int menu = 1;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             menu++;
@@ -73,59 +68,27 @@ namespace primeiro_git
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
-
-            this.Hide();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Form1 form1 = new Form1();
+            form1.Show();
 
+            this.Hide();
         }
 
-        private void Form1_Click(object sender, EventArgs e)
+        private void Form3_Click(object sender, EventArgs e)
         {
 
             menu = 1;
-       
-                MenuBar.Enabled = false;
-                MenuBar.Hide();
 
-                pictureBox1.Location = new Point(8, 8);
-            
-        }
-        bool senhaVisivel = true;
+            MenuBar.Enabled = false;
+            MenuBar.Hide();
 
-        private void BTNmostrar_Click(object sender, EventArgs e)
-        {
-            if (senhaVisivel)
-            {
-                TXTsenha.PasswordChar = '*'; 
-                senhaVisivel = false;
-                BTNmostrar.Text = "Mostrar Senha";
-            }
-            else
-            {
-                
-                TXTsenha.PasswordChar = '\0';
-                senhaVisivel = true;
-                BTNmostrar.Text = "Ocultar Senha"; 
-            }
-        }
+            pictureBox1.Location = new Point(8, 8);
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                   QUERY_MYSQL(CONFIG_CONEXAO_BD, "SELECT nome FROM usuario WHERE user='"+ TXTusuario.Text + "' AND senha='"+ TXTsenha.Text + "'");
-                   MessageBox.Show("Login efetuado!", "SENAI", MessageBoxButtons.OK);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERRO ao procurar pelos dados!", "SENAI", MessageBoxButtons.OK);
-            }
-            
         }
     }
 }
