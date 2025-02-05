@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static primeiro_git.Form1;
 
 namespace primeiro_git
 {
@@ -35,6 +36,20 @@ namespace primeiro_git
         private void Form3_Load(object sender, EventArgs e)
         {
             pictureBox1.Location = new Point(8, 8);
+
+            if (UsuarioGlobal.NomeUsuario== null || UsuarioGlobal.FuncaoUsuario== null)
+            {
+                 MessageBox.Show("Por favor, faça login para ter acesso à tela PROCESSO", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
+            }
+            else
+            {
+                TXTusuario.Text= UsuarioGlobal.NomeUsuario.ToString();
+                TXTfuncao.Text = UsuarioGlobal.FuncaoUsuario.ToString();
+               
+            }
+
+
         }
 
         int menu = 1;

@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.menuInicial = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TXTfuncao = new System.Windows.Forms.TextBox();
+            this.TXTusuario = new System.Windows.Forms.TextBox();
             this.MenuBar = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BTNprocesso = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,14 +56,26 @@
             this.menuInicial.Controls.Add(this.label3);
             this.menuInicial.Controls.Add(this.label2);
             this.menuInicial.Controls.Add(this.label1);
-            this.menuInicial.Controls.Add(this.textBox2);
-            this.menuInicial.Controls.Add(this.textBox1);
+            this.menuInicial.Controls.Add(this.TXTfuncao);
+            this.menuInicial.Controls.Add(this.TXTusuario);
             this.menuInicial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuInicial.Location = new System.Drawing.Point(260, 51);
             this.menuInicial.Name = "menuInicial";
             this.menuInicial.Size = new System.Drawing.Size(297, 356);
             this.menuInicial.TabIndex = 1;
             this.menuInicial.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleDescription = "Botão para conectar com o Arduino UNO";
+            this.button1.BackColor = System.Drawing.Color.Tomato;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(92, 285);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 54);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "CONECTAR";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -98,39 +111,31 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "PROCESSO";
             // 
-            // textBox2
+            // TXTfuncao
             // 
-            this.textBox2.Location = new System.Drawing.Point(66, 240);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 27);
-            this.textBox2.TabIndex = 1;
+            this.TXTfuncao.Enabled = false;
+            this.TXTfuncao.Location = new System.Drawing.Point(66, 240);
+            this.TXTfuncao.Multiline = true;
+            this.TXTfuncao.Name = "TXTfuncao";
+            this.TXTfuncao.Size = new System.Drawing.Size(176, 27);
+            this.TXTfuncao.TabIndex = 1;
+            this.TXTfuncao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // TXTusuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 150);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 27);
-            this.textBox1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.AccessibleDescription = "Botão para conectar com o Arduino UNO";
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(92, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 54);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "CONECTAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.TXTusuario.Enabled = false;
+            this.TXTusuario.Location = new System.Drawing.Point(66, 150);
+            this.TXTusuario.Multiline = true;
+            this.TXTusuario.Name = "TXTusuario";
+            this.TXTusuario.Size = new System.Drawing.Size(176, 27);
+            this.TXTusuario.TabIndex = 0;
+            this.TXTusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MenuBar
             // 
             this.MenuBar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.MenuBar.Controls.Add(this.button4);
-            this.MenuBar.Controls.Add(this.button3);
+            this.MenuBar.Controls.Add(this.BTNprocesso);
             this.MenuBar.Controls.Add(this.button2);
             this.MenuBar.Enabled = false;
             this.MenuBar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,19 +162,19 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // BTNprocesso
             // 
-            this.button3.AccessibleDescription = "Botão para conectar com o Arduino UNO";
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(63, 206);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 40);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Processo";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BTNprocesso.AccessibleDescription = "Botão para conectar com o Arduino UNO";
+            this.BTNprocesso.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BTNprocesso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNprocesso.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNprocesso.Location = new System.Drawing.Point(63, 206);
+            this.BTNprocesso.Name = "BTNprocesso";
+            this.BTNprocesso.Size = new System.Drawing.Size(116, 40);
+            this.BTNprocesso.TabIndex = 8;
+            this.BTNprocesso.Text = "Processo";
+            this.BTNprocesso.UseVisualStyleBackColor = false;
+            this.BTNprocesso.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -228,9 +233,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.menuInicial);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "PieceTracker";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.Click += new System.EventHandler(this.Form3_Click);
             this.menuInicial.ResumeLayout(false);
@@ -248,12 +256,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TXTfuncao;
+        private System.Windows.Forms.TextBox TXTusuario;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox MenuBar;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BTNprocesso;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static primeiro_git.Form1;
 namespace primeiro_git
 {
     public partial class Form2 : Form
@@ -108,10 +109,20 @@ namespace primeiro_git
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+
+            if (UsuarioGlobal.NomeUsuario == null || UsuarioGlobal.FuncaoUsuario == null)
+            {
+                MessageBox.Show("Por favor, faça login para ter acesso à tela PROCESSO", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                 Form3 form3 = new Form3();
             form3.Show();
 
             this.Hide();
+            }
+           
         }
 
         private void button4_Click(object sender, EventArgs e)

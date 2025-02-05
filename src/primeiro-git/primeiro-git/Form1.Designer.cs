@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuInicial = new System.Windows.Forms.GroupBox();
-            this.TXTusuario = new System.Windows.Forms.TextBox();
-            this.TXTsenha = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.BTNmostrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TXTsenha = new System.Windows.Forms.TextBox();
+            this.TXTusuario = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.MenuBar = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BTNmostrar = new System.Windows.Forms.Button();
             this.menuInicial.SuspendLayout();
             this.MenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,21 +64,40 @@
             this.menuInicial.TabStop = false;
             this.menuInicial.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // TXTusuario
+            // BTNmostrar
             // 
-            this.TXTusuario.Location = new System.Drawing.Point(66, 150);
-            this.TXTusuario.Multiline = true;
-            this.TXTusuario.Name = "TXTusuario";
-            this.TXTusuario.Size = new System.Drawing.Size(176, 27);
-            this.TXTusuario.TabIndex = 0;
+            this.BTNmostrar.BackColor = System.Drawing.Color.Transparent;
+            this.BTNmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNmostrar.Location = new System.Drawing.Point(186, 273);
+            this.BTNmostrar.Name = "BTNmostrar";
+            this.BTNmostrar.Size = new System.Drawing.Size(56, 23);
+            this.BTNmostrar.TabIndex = 5;
+            this.BTNmostrar.Text = "Mostrar";
+            this.BTNmostrar.UseVisualStyleBackColor = false;
+            this.BTNmostrar.Click += new System.EventHandler(this.BTNmostrar_Click);
             // 
-            // TXTsenha
+            // label3
             // 
-            this.TXTsenha.Location = new System.Drawing.Point(66, 240);
-            this.TXTsenha.Multiline = true;
-            this.TXTsenha.Name = "TXTsenha";
-            this.TXTsenha.Size = new System.Drawing.Size(176, 27);
-            this.TXTsenha.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(118, 204);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 24);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Senha";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(115, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Usuário";
             // 
             // label1
             // 
@@ -91,27 +111,24 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "LOGIN";
             // 
-            // label2
+            // TXTsenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(115, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Usuário";
+            this.TXTsenha.Location = new System.Drawing.Point(66, 240);
+            this.TXTsenha.Multiline = true;
+            this.TXTsenha.Name = "TXTsenha";
+            this.TXTsenha.Size = new System.Drawing.Size(176, 27);
+            this.TXTsenha.TabIndex = 1;
+            this.TXTsenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTsenha.TextChanged += new System.EventHandler(this.TXTsenha_TextChanged);
             // 
-            // label3
+            // TXTusuario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(118, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Senha";
+            this.TXTusuario.Location = new System.Drawing.Point(66, 150);
+            this.TXTusuario.Multiline = true;
+            this.TXTusuario.Name = "TXTusuario";
+            this.TXTusuario.Size = new System.Drawing.Size(176, 27);
+            this.TXTusuario.TabIndex = 0;
+            this.TXTusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
@@ -121,7 +138,7 @@
             this.button1.Location = new System.Drawing.Point(551, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 54);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -143,19 +160,19 @@
             this.MenuBar.Text = "MENU";
             this.MenuBar.Visible = false;
             // 
-            // button2
+            // button4
             // 
-            this.button2.AccessibleDescription = "Botão para conectar com o Arduino UNO";
-            this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(61, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 40);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cadastro";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button4.AccessibleDescription = "Botão para conectar com o Arduino UNO";
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(61, 334);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(116, 40);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Login";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -171,19 +188,19 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button2
             // 
-            this.button4.AccessibleDescription = "Botão para conectar com o Arduino UNO";
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(61, 334);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 40);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Login";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button2.AccessibleDescription = "Botão para conectar com o Arduino UNO";
+            this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(61, 88);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 40);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Cadastro";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -197,19 +214,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // BTNmostrar
-            // 
-            this.BTNmostrar.BackColor = System.Drawing.Color.Transparent;
-            this.BTNmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNmostrar.Location = new System.Drawing.Point(186, 273);
-            this.BTNmostrar.Name = "BTNmostrar";
-            this.BTNmostrar.Size = new System.Drawing.Size(56, 23);
-            this.BTNmostrar.TabIndex = 28;
-            this.BTNmostrar.Text = "Mostrar";
-            this.BTNmostrar.UseVisualStyleBackColor = false;
-            this.BTNmostrar.Click += new System.EventHandler(this.BTNmostrar_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,9 +224,12 @@
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuInicial);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "PieceTracker";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             this.menuInicial.ResumeLayout(false);

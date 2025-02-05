@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.menuInicial = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.BTNmostrar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TXTuser = new System.Windows.Forms.TextBox();
             this.TXTsobre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TXTverifi = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TXTsenha = new System.Windows.Forms.TextBox();
-            this.TXTnome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.TXTnome = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TXTlogin = new System.Windows.Forms.TextBox();
+            this.TXTverifi = new System.Windows.Forms.TextBox();
+            this.CBfuncao = new System.Windows.Forms.ComboBox();
+            this.TXTsenha = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.MenuBar = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CBfuncao = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TXTuser = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TXTlogin = new System.Windows.Forms.TextBox();
-            this.BTNmostrar = new System.Windows.Forms.Button();
             this.menuInicial.SuspendLayout();
             this.MenuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,28 +85,38 @@
             this.menuInicial.TabStop = false;
             this.menuInicial.Enter += new System.EventHandler(this.menuInicial_Enter);
             // 
-            // label6
+            // BTNmostrar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(93, 225);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 16);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Função";
+            this.BTNmostrar.BackColor = System.Drawing.Color.Transparent;
+            this.BTNmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNmostrar.Location = new System.Drawing.Point(328, 278);
+            this.BTNmostrar.Name = "BTNmostrar";
+            this.BTNmostrar.Size = new System.Drawing.Size(56, 23);
+            this.BTNmostrar.TabIndex = 101;
+            this.BTNmostrar.Text = "Mostrar";
+            this.BTNmostrar.UseVisualStyleBackColor = false;
+            this.BTNmostrar.Click += new System.EventHandler(this.BTNmostrar_Click);
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(79, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Sobrenome";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(290, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 16);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "User";
+            // 
+            // TXTuser
+            // 
+            this.TXTuser.Location = new System.Drawing.Point(241, 114);
+            this.TXTuser.Multiline = true;
+            this.TXTuser.Name = "TXTuser";
+            this.TXTuser.Size = new System.Drawing.Size(143, 22);
+            this.TXTuser.TabIndex = 3;
+            this.TXTuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXTsobre
             // 
@@ -113,18 +124,50 @@
             this.TXTsobre.Multiline = true;
             this.TXTsobre.Name = "TXTsobre";
             this.TXTsobre.Size = new System.Drawing.Size(142, 22);
-            this.TXTsobre.TabIndex = 18;
+            this.TXTsobre.TabIndex = 2;
             // 
-            // label4
+            // button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(259, 304);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 16);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Confirme a senha";
+            this.button1.AccessibleDescription = "Botão para conectar com o Arduino UNO";
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(45, 308);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 54);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Confirmar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // TXTnome
+            // 
+            this.TXTnome.Location = new System.Drawing.Point(49, 114);
+            this.TXTnome.Multiline = true;
+            this.TXTnome.Name = "TXTnome";
+            this.TXTnome.Size = new System.Drawing.Size(143, 22);
+            this.TXTnome.TabIndex = 1;
+            this.TXTnome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTnome.TextChanged += new System.EventHandler(this.TXTnome_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(288, 160);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 16);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Login";
+            // 
+            // TXTlogin
+            // 
+            this.TXTlogin.Location = new System.Drawing.Point(242, 179);
+            this.TXTlogin.Multiline = true;
+            this.TXTlogin.Name = "TXTlogin";
+            this.TXTlogin.Size = new System.Drawing.Size(142, 22);
+            this.TXTlogin.TabIndex = 4;
+            this.TXTlogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXTverifi
             // 
@@ -132,29 +175,29 @@
             this.TXTverifi.Multiline = true;
             this.TXTverifi.Name = "TXTverifi";
             this.TXTverifi.Size = new System.Drawing.Size(143, 22);
-            this.TXTverifi.TabIndex = 16;
+            this.TXTverifi.TabIndex = 6;
+            this.TXTverifi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label3
+            // CBfuncao
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(288, 233);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Senha";
+            this.CBfuncao.FormattingEnabled = true;
+            this.CBfuncao.Items.AddRange(new object[] {
+            "FUNÇÃO 1",
+            "FUNÇÃO 2",
+            "FUNÇÃO 3"});
+            this.CBfuncao.Location = new System.Drawing.Point(45, 253);
+            this.CBfuncao.Name = "CBfuncao";
+            this.CBfuncao.Size = new System.Drawing.Size(146, 21);
+            this.CBfuncao.TabIndex = 7;
             // 
-            // label2
+            // TXTsenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(95, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Nome";
+            this.TXTsenha.Location = new System.Drawing.Point(238, 252);
+            this.TXTsenha.Multiline = true;
+            this.TXTsenha.Name = "TXTsenha";
+            this.TXTsenha.Size = new System.Drawing.Size(146, 22);
+            this.TXTsenha.TabIndex = 5;
+            this.TXTsenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -169,35 +212,61 @@
             this.label1.Text = "CADASTRO";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // TXTsenha
+            // label6
             // 
-            this.TXTsenha.Location = new System.Drawing.Point(238, 252);
-            this.TXTsenha.Multiline = true;
-            this.TXTsenha.Name = "TXTsenha";
-            this.TXTsenha.Size = new System.Drawing.Size(146, 22);
-            this.TXTsenha.TabIndex = 12;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(93, 225);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 16);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Função";
             // 
-            // TXTnome
+            // label2
             // 
-            this.TXTnome.Location = new System.Drawing.Point(49, 114);
-            this.TXTnome.Multiline = true;
-            this.TXTnome.Name = "TXTnome";
-            this.TXTnome.Size = new System.Drawing.Size(143, 22);
-            this.TXTnome.TabIndex = 11;
-            this.TXTnome.TextChanged += new System.EventHandler(this.TXTnome_TextChanged);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(95, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Nome";
             // 
-            // button1
+            // label4
             // 
-            this.button1.AccessibleDescription = "Botão para conectar com o Arduino UNO";
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(45, 308);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 54);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(259, 304);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 16);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Confirme a senha";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(79, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Sobrenome";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(288, 233);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Senha";
             // 
             // MenuBar
             // 
@@ -270,69 +339,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // CBfuncao
-            // 
-            this.CBfuncao.FormattingEnabled = true;
-            this.CBfuncao.Items.AddRange(new object[] {
-            "FUNÇÃO 1",
-            "FUNÇÃO 2",
-            "FUNÇÃO 3"});
-            this.CBfuncao.Location = new System.Drawing.Point(45, 253);
-            this.CBfuncao.Name = "CBfuncao";
-            this.CBfuncao.Size = new System.Drawing.Size(146, 21);
-            this.CBfuncao.TabIndex = 27;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(290, 95);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 16);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "User";
-            // 
-            // TXTuser
-            // 
-            this.TXTuser.Location = new System.Drawing.Point(241, 114);
-            this.TXTuser.Multiline = true;
-            this.TXTuser.Name = "TXTuser";
-            this.TXTuser.Size = new System.Drawing.Size(143, 22);
-            this.TXTuser.TabIndex = 28;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(288, 160);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 16);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Login";
-            // 
-            // TXTlogin
-            // 
-            this.TXTlogin.Location = new System.Drawing.Point(242, 179);
-            this.TXTlogin.Multiline = true;
-            this.TXTlogin.Name = "TXTlogin";
-            this.TXTlogin.Size = new System.Drawing.Size(142, 22);
-            this.TXTlogin.TabIndex = 30;
-            // 
-            // BTNmostrar
-            // 
-            this.BTNmostrar.BackColor = System.Drawing.Color.Transparent;
-            this.BTNmostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNmostrar.Location = new System.Drawing.Point(328, 278);
-            this.BTNmostrar.Name = "BTNmostrar";
-            this.BTNmostrar.Size = new System.Drawing.Size(56, 23);
-            this.BTNmostrar.TabIndex = 101;
-            this.BTNmostrar.Text = "Mostrar";
-            this.BTNmostrar.UseVisualStyleBackColor = false;
-            this.BTNmostrar.Click += new System.EventHandler(this.BTNmostrar_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,9 +348,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.menuInicial);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "PieceTracker";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Click += new System.EventHandler(this.Form2_Click);
             this.menuInicial.ResumeLayout(false);

@@ -32,6 +32,17 @@ namespace primeiro_git
 
         }
 
+        public static class UsuarioGlobal
+        {
+            // Propriedade estática para armazenar o nome do usuário
+            public static string NomeUsuario { get; set; }
+
+            // Propriedade estática para armazenar a função do usuário
+            public static string FuncaoUsuario { get; set; }
+        }
+
+
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -73,10 +84,18 @@ namespace primeiro_git
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
+            if (UsuarioGlobal.NomeUsuario == null || UsuarioGlobal.FuncaoUsuario == null)
+            {
+                MessageBox.Show("Por favor, faça login para ter acesso à tela PROCESSO", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            this.Hide();
+            }
+            else
+            {
+                Form3 form3 = new Form3();
+                form3.Show();
+
+                this.Hide();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -116,16 +135,72 @@ namespace primeiro_git
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrEmpty(TXTusuario.Text) || string.IsNullOrEmpty(TXTsenha.Text))
             {
-                   QUERY_MYSQL(CONFIG_CONEXAO_BD, "SELECT nome FROM usuario WHERE user='"+ TXTusuario.Text + "' AND senha='"+ TXTsenha.Text + "'");
-                   MessageBox.Show("Login efetuado!", "SENAI", MessageBoxButtons.OK);
+                MessageBox.Show("Por favor, preencha todos os campos.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("ERRO ao procurar pelos dados!", "SENAI", MessageBoxButtons.OK);
+             
+                string query = "SELECT nome, funcao FROM usuario WHERE user=@user AND senha=@senha";
+
+                try
+                {
+                    using (var conexao = new MySqlConnection(CONFIG_CONEXAO_BD))
+                    {
+                        conexao.Open();
+                        using (var comando = new MySqlCommand(query, conexao))
+                        {
+                            
+                            comando.Parameters.AddWithValue("@user", TXTusuario.Text);
+                            comando.Parameters.AddWithValue("@senha", TXTsenha.Text);
+
+                            using (var reader = comando.ExecuteReader())
+                            {
+                                if (reader.Read())  
+                                {
+                                   
+                                    UsuarioGlobal.NomeUsuario = reader["nome"].ToString();
+                                    UsuarioGlobal.FuncaoUsuario = reader["funcao"].ToString();
+
+                                   
+                                    MessageBox.Show("Usuário '" + UsuarioGlobal.NomeUsuario + "' autenticado com sucesso!",
+                                                    "Sucesso",
+                                                    MessageBoxButtons.OK,
+                                                    MessageBoxIcon.Information);
+
+                                    // Abre o Form3
+                                    Form3 form3 = new Form3();
+                                    form3.Show();
+
+                                    // Esconde o Form de Login
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    // Se não encontrar o usuário, exibe mensagem de erro
+                                    MessageBox.Show("Usuário ou senha inválidos.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Em caso de erro na execução da consulta, exibe uma mensagem de erro
+                    MessageBox.Show("Erro ao consultar o banco de dados: " + ex.Message,
+                                    "Erro",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
-            
+
+
+        }
+
+        private void TXTsenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
